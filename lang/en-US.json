@@ -659,7 +659,7 @@
             "description": "The current user's Steam account ID."
           },
           "static-account-id-str": {
-            "translated-name": "StaticAccountID",
+            "translated-name": "StaticAccountIDStr",
             "description": "The current user's Steam static account ID."
           },
           "user-level": {

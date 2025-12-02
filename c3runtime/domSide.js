@@ -142,7 +142,7 @@
           : false,
         accountId: this._steamId ? this._steamId["accountId"] : 0,
         staticAccountId: this._steamId
-          ? this._steamId["staticAccountId"].toString()
+          ? this._steamId["steamId"]
           : "",
         screenName: this._steamId ? this._steamId["screenName"] : "",
         level: this._steamId ? this._steamId["level"] : 0,

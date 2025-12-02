@@ -1,18 +1,12 @@
 "use strict";
 {
-    C3.Plugins.open_Greengrinds.Type = class GreengrindsType extends C3.SDKTypeBase
+    const C3 = globalThis.C3;
+    C3.Plugins.open_Greengrinds.Type = class GreengrindsType extends globalThis.ISDKObjectTypeBase
     {
-        constructor(objectClass)
+        constructor()
         {
-            super(objectClass);
+            super();
         }
-
-        Release()
-        {
-            super.Release();
-        }
-
-        OnCreate()
-        {}
+        _onCreate() {}
     };
 }

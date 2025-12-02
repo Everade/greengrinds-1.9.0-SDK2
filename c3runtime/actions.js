@@ -1,93 +1,93 @@
 "use strict";
 {
-    C3.Plugins.open_Greengrinds.Acts = {
+    globalThis.C3.Plugins.open_Greengrinds.Acts = {
         ActivateAchievement(achievement)
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("activate-achievement",
+            this._postToDOMAsync("activate-achievement",
             {
                 "achievement": achievement
             })
                 .then(() => {
                 console.warn("[Construct 3] Greenworks: success activate achievement");
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnActivateAchievementSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnActivateAchievementSuccess);
             })
                 .
             catch (err => {
                 this._activateAchievementLastErr = err;
                 console.warn("[Construct 3] Greenworks: error activate achievement: ", err);
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnActivateAchievementError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnActivateAchievementError);
             });
         },
 
         GetAchievement(achievement)
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("get-achievement",
+            this._postToDOMAsync("get-achievement",
             {
                 "achievement": achievement
             })
                 .then((isAchieved) => {
                 this._getAchievementLastData = isAchieved ? 1 : 0;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetAchievementSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetAchievementSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error get achievement: ", err);
                 this._getAchievementLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetAchievementError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetAchievementError);
             });
         },
 
         ClearAchievement(achievement)
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("clear-achievement",
+            this._postToDOMAsync("clear-achievement",
             {
                 "achievement": achievement
             })
                 .then(() => {
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnClearAchievementSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnClearAchievementSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error clear achievement: ", err);
                 this._clearAchievementLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnClearAchievementError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnClearAchievementError);
             });
         },
 
         GetAchievementNames()
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("get-achievement-names",
+            this._postToDOMAsync("get-achievement-names",
             {})
                 .then((names) => {
                 this._getAchievementNamesLastData = names;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetAchievementNamesSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetAchievementNamesSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error get achievement names: ", err);
                 this._getAchievementNamesLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnClearAchievementError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnClearAchievementError);
             });
         },
 
         GetNumberOfAchievements()
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("get-number-of-achievements",
+            this._postToDOMAsync("get-number-of-achievements",
             {})
                 .then((number) => {
                 this._getNumberOfAchievementsLastData = number;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetNumberOfAchievementsSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetNumberOfAchievementsSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error get achievement names: ", err);
                 this._getNumberOfAchievementsLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetNumberOfAchievementsError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetNumberOfAchievementsError);
             });
         },
 
@@ -103,7 +103,7 @@
         "Achievements"
     ];
             if (!this._isAvailable) return;
-            this.PostToDOM("activate-overlay",
+            this._postToDOM("activate-overlay",
             {
                 "option": OVERLAY_OPTIONS[option]
             });
@@ -112,119 +112,119 @@
         SaveTextToFile(file_Name, file_Content)
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("save-text-to-file",
+            this._postToDOMAsync("save-text-to-file",
             {
                 "file_content": file_Content,
                 "file_name": file_Name
             })
                 .then(() => {
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnSaveTextToFileSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnSaveTextToFileSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error save text to file: ", err);
                 this._saveTextToFileLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnSaveTextToFileError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnSaveTextToFileError);
             });
         },
 
         ReadTextFromFile(file_Name)
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("read-text-from-file",
+            this._postToDOMAsync("read-text-from-file",
             {
                 "file_name": file_Name
             })
                 .then((e) => {
                 this._readTextFromFileLastData = e;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnReadTextFromFileSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnReadTextFromFileSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error read text from file: ", err);
                 this._readTextFromFileLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnReadTextFromFileError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnReadTextFromFileError);
             });
         },
 
         GetCloudStatus()
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("get-cloud-status",
+            this._postToDOMAsync("get-cloud-status",
             {})
                 .then((e) => {
                 this._isCloudEnabled = e["isCloudEnabled"];
                 this._isCloudEnabledForUser = e["isCloudEnabledForUser"];
                 this._getFileCount = e["getFileCount"];
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetCloudStatusSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetCloudStatusSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error get cloud status: ", err);
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetCloudStatusError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetCloudStatusError);
             });
         },
 
         DeleteFile(file_Name)
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("delete-file",
+            this._postToDOMAsync("delete-file",
             {
                 "file_name": file_Name
             })
                 .then((e) => {
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnDeleteFileSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnDeleteFileSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error delete file: ", err);
                 this._deleteFileLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnDeleteFileError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnDeleteFileError);
             });
         },
 
         GetCloudQuota()
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("get-cloud-quota",
+            this._postToDOMAsync("get-cloud-quota",
             {})
                 .then((e) => {
                 this._getCloudQuotaTotal = e["total"];
                 this._getCloudQuotaAvailable = e["available"];
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetCloudQuotaSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetCloudQuotaSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error get cloud quota: ", err);
                 this._getCloudQuotaLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetCloudQuotaError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetCloudQuotaError);
             });
         },
 
         GetFileNameAndSize(index)
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("get-file-name-and-size",
+            this._postToDOMAsync("get-file-name-and-size",
             {
                 "index": index
             })
                 .then((e) => {
                 this._getFileNameAndSizeName = e["name"];
                 this._getFileNameAndSizeSize = e["size"];
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetFileNameAndSizeSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetFileNameAndSizeSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error get file name and size: ", err);
                 this._getFileNameAndSizeLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetFileNameAndSizeError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetFileNameAndSizeError);
             });
         },
 
         EnableCloud(flag)
         {
             if (!this._isAvailable) return;
-            this.PostToDOM("enable-cloud",
+            this._postToDOM("enable-cloud",
             {
                 "flag": flag == 1 ? true : false
             });
@@ -236,74 +236,74 @@
             if (!this._isAvailable) return;
             var FilePathArray = [];
             FilePathArray.push(filePath);
-            this.PostToDOMAsync("save-file-to-cloud",
+            this._postToDOMAsync("save-file-to-cloud",
             {
                 "file_path": FilePathArray
             })
                 .then(() => {
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnSaveFileToCloudSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnSaveFileToCloudSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error save file to cloud: ", err);
                 this._saveFileToCloudLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnSaveFileToCloudError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnSaveFileToCloudError);
             });
         },
 
         GetStatInt(name)
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("get-stat-int",
+            this._postToDOMAsync("get-stat-int",
             {
                 "name": name
             })
                 .then((value) => {
                 this._getStatIntLastData = value;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetStatIntSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetStatIntSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error get stat int: ", err);
                 this._getStatIntLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetStatIntError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetStatIntError);
             });
         },
 
         GetStatFloat(name)
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("get-stat-float",
+            this._postToDOMAsync("get-stat-float",
             {
                 "name": name
             })
                 .then((value) => {
                 this._getStatFloatLastData = value;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetStatFloatSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetStatFloatSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error get stat float: ", err);
                 this._getStatFloatLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetStatFloatError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetStatFloatError);
             });
         },
 
         SetStat(value, name)
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("set-stat",
+            this._postToDOMAsync("set-stat",
             {
                 "name": name,
                 "value": value
             })
                 .then((success) => {
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnSetStatSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnSetStatSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error set stat float: ", err);
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnSetStatError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnSetStatError);
             });
         },
 
@@ -311,61 +311,61 @@
         {
             if (!this._isAvailable) return;
             console.log("storeStats");
-            this.PostToDOMAsync("store-stats",
+            this._postToDOMAsync("store-stats",
             {})
                 .then((game_id) => {
                 console.log("storeStatsSuccess");
                 this._storeStatsLastData = game_id;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnStoreStatsSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnStoreStatsSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error store stats: ", err);
                 this._storeStatsLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnStoreStatsError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnStoreStatsError);
             });
         },
 
         ResetAllStats(resetAchievement)
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("reset-all-stats",
+            this._postToDOMAsync("reset-all-stats",
             {
                 "reset_achievement": resetAchievement > 0 ? true : false
             })
                 .then((success) => {
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnResetAllStatsSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnResetAllStatsSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: reset all stats error");
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnResetAllStatsError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnResetAllStatsError);
             });
         },
 
         GetIsDLCInstalled(dlcAppId)
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("get-is-dlc-installed",
+            this._postToDOMAsync("get-is-dlc-installed",
             {
                 "dlc_app_id": dlcAppId
             })
                 .then((isDLCInstalled) => {
                 this._getIsDLCInstalledLastData = isDLCInstalled ? 1 : 0;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetIsDLCInstalledSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetIsDLCInstalledSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error get is DLC installed: ", err);
                 this._getIsDLCInstalledLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetIsDLCInstalledError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetIsDLCInstalledError);
             });
         },
 
         InstallDlc(dlcAppId)
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("install-dlc",
+            this._postToDOMAsync("install-dlc",
             {
                 "dlc_app_id": dlcAppId
             })
@@ -379,7 +379,7 @@
         UninstallDlc(dlcAppId)
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("uninstall-dlc",
+            this._postToDOMAsync("uninstall-dlc",
             {
                 "dlc_app_id": dlcAppId
             })
@@ -393,92 +393,92 @@
         GetDlcDataByIndex(index)
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("get-dlc-data-by-index",
+            this._postToDOMAsync("get-dlc-data-by-index",
             {
                 "index": index
             })
                 .then((data) => {
                 this._getDLCDataByIndexLastData = data;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetDLCDataByIndexSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetDLCDataByIndexSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error get dlc data by index: ", err);
                 this._getDLCDataByIndexLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetDLCDataByIndexError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetDLCDataByIndexError);
             });
         },
 
         GetDlcCount()
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("get-dlc-count",
+            this._postToDOMAsync("get-dlc-count",
             {})
                 .then((count) => {
                 this._getDLCCountLastData = count;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetDLCCountSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetDLCCountSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error get dlc count: ", err);
                 this._getDLCCountLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetDLCCountError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetDLCCountError);
             });
         },
 
         GetAchievement(achievement)
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("get-achievement",
+            this._postToDOMAsync("get-achievement",
             {
                 "achievement": achievement
             })
                 .then((isAchieved) => {
                 this._getAchievementLastData = isAchieved ? 1 : 0;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetAchievementSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetAchievementSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error get achievement: ", err);
                 this._getAchievementLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetAchievementError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetAchievementError);
             });
         },
 
                 GetAchievement(achievement)
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("get-achievement",
+            this._postToDOMAsync("get-achievement",
             {
                 "achievement": achievement
             })
                 .then((isAchieved) => {
                 this._getAchievementLastData = isAchieved ? 1 : 0;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetAchievementSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetAchievementSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error get achievement: ", err);
                 this._getAchievementLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetAchievementError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetAchievementError);
             });
         },
         GetFriendAvatar(steamId)
         {
             if (!this._isAvailable) return;
-            this.PostToDOMAsync("get-friend-avatar",
+            this._postToDOMAsync("get-friend-avatar",
             {
                 "steam-id": steamId
             })
                 .then((data) => {
                 this._getFriendAvatarLastData = data;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetFriendAvatarSuccess);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetFriendAvatarSuccess);
             })
                 .
             catch (err => {
                 console.warn("[Construct 3] Greenworks: error get achievement: ", err);
                 this._getAchievementLastErr = err;
-                this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnGetAchievementError);
+                this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnGetAchievementError);
             });
         },
     };

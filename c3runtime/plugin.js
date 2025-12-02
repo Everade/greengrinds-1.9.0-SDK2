@@ -1,15 +1,12 @@
 "use strict";
 {
-    C3.Plugins.open_Greengrinds = class GreengrindsPlugin extends C3.SDKPluginBase
+    const C3 = globalThis.C3;
+    C3.Plugins.open_Greengrinds = class GreengrindsPlugin extends globalThis.ISDKPluginBase
     {
-        constructor(opts)
+        constructor()
         {
-            super(opts);
+            super();
         }
 
-        Release()
-        {
-            super.Release();
-        }
     };
 }

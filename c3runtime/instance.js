@@ -3,12 +3,14 @@
 {
     const DOM_COMPONENT_ID = "greenworks";
 
-    C3.Plugins.open_Greengrinds.Instance = class GreenworksInstance extends C3.SDKInstanceBase
+    globalThis.C3.Plugins.open_Greengrinds.Instance = class GreenworksInstance extends globalThis.ISDKInstanceBase
     {
-        constructor(inst, properties)
+         constructor()
         {
             console.log("*** INFO *** instance.js started");
-            super(inst, DOM_COMPONENT_ID);
+            super({ domComponentId: DOM_COMPONENT_ID });
+
+            const properties = this._getInitProperties();
 
             this._isAvailable = false;
             this._isGameOverlayEnabled = false;
@@ -65,13 +67,13 @@
 
 
 
-            this.AddDOMMessageHandlers([
+            this._addDOMMessageHandlers([
                 ["game-overlay-activated", e => this._OnGameOverlayActivated(e)]
             ]);
 
             // Get initial state from DOM. Make runtime loading wait for the response.
-            this._runtime.AddLoadPromise(
-            this.PostToDOMAsync("load")
+            this.runtime.addLoadPromise(
+            this._postToDOMAsync("load")
                 .then(data => {
                 this._isAvailable = data["isAvailable"];
                 this._isGameOverlayEnabled = data["isGameOverlayEnabled"];
@@ -79,6 +81,7 @@
 
                 this._accountId = data["accountId"];
                 this._staticAccountId = data["staticAccountId"];
+                this._staticAccountIdStr = data["staticAccountId"];
                 this._screenName = data["screenName"];
                 this._level = data["level"];
                 this._gameLang = data["gameLang"];
@@ -93,15 +96,15 @@
             }));
         }
 
-        Release()
+        _release()
         {
-            super.Release();
+            super._release();
         }
 
         _OnGameOverlayActivated(e)
         {
-            if (e["isActive"]) this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnOverlayActivated);
-            else this.Trigger(C3.Plugins.open_Greengrinds.Cnds.OnOverlayDeactivated);
+            if (e["isActive"]) this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnOverlayActivated);
+            else this._trigger(globalThis.C3.Plugins.open_Greengrinds.Cnds.OnOverlayDeactivated);
         }
     };
 

@@ -1,6 +1,6 @@
 "use strict";
 {
-    C3.Plugins.open_Greengrinds.Exps = {
+    globalThis.C3.Plugins.open_Greengrinds.Exps = {
         ActivateAchievementLastErr()
         {
             return this._activateAchievementLastErr;
@@ -136,9 +136,9 @@
             return this._storeStatsLastErr;
         },
 
-        StaticAccountID()
+        StaticAccountIDStr()
         {
-            return this._staticAccountId;
+            return this._staticAccountIdStr;
         },
         GetIsDLCInstalledLastData()
         {
@@ -195,12 +195,9 @@
             return this._level;
         },
 
-        StaticAccountID()
+        StaticAccountIDStr()
         {
-            // Deprecated expression for backwards compatibility. Return as number,
-            // which is lossy since it can be over MAX_SAFE_INTEGER.
-            const ret = parseFloat(this._staticAccountId);
-            return isFinite(ret) ? ret : 0;
+            return this._staticAccountIdStr;
         },
 
         IPCountry()

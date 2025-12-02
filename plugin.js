@@ -6,6 +6,7 @@
 
   let app = null;
 
+  const SDK = globalThis.SDK;
   const PLUGIN_CLASS =
     (SDK.Plugins.open_Greengrinds = class GreengrindsPlugin extends (
       SDK.IPluginBase
@@ -15,12 +16,13 @@
 
         SDK.Lang.PushContext("plugins." + PLUGIN_ID.toLowerCase());
 
-        this._info.SetName(lang(".name"));
-        this._info.SetDescription(lang(".description"));
+        this._info.SetName(globalThis.lang(".name"));
+        this._info.SetDescription(globalThis.lang(".description"));
         this._info.SetVersion(PLUGIN_VERSION);
         this._info.SetCategory(PLUGIN_CATEGORY);
         this._info.SetAuthor("open");
-        this._info.SetHelpUrl(lang(".help-url"));
+        this._info.SetHelpUrl(globalThis.lang(".help-url"));
+        this._info.SetRuntimeModuleMainScript("c3runtime/main.js");
         this._info.SetIsSingleGlobal(true);
 
         this._info.SetSupportedRuntimes(["c3"]);

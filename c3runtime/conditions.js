@@ -1,6 +1,6 @@
 "use strict";
 {
-    C3.Plugins.open_Greengrinds.Cnds = {
+    globalThis.C3.Plugins.open_Greengrinds.Cnds = {
         OnActivateAchievementError()
         {
             return true;

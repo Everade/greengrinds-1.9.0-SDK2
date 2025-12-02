@@ -1,6 +1,7 @@
 "use strict";
 (function()
 {
+    const SDK = globalThis.SDK;
     const PLUGIN_CLASS = SDK.Plugins.open_Greengrinds;
 
     PLUGIN_CLASS.Instance = class GreengrindsInstance extends SDK.IInstanceBase

@@ -744,7 +744,7 @@
       },
       {
         "id": "static-account-id-str",
-        "expressionName": "StaticAccountID",
+        "expressionName": "StaticAccountIDStr",
         "returnType": "string"
       },
       {

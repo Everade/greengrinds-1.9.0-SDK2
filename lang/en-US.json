@@ -1,0 +1,685 @@
+{
+  "languageTag": "en-US",
+  "fileDescription": "Strings for Greengrinds Plugin",
+  "text": {
+    "plugins": {
+      "open_greengrinds": {
+        "name": "Greengrinds",
+        "description": "Greenworks for nw.js 0.86.0 or Electron",
+        "help-url": "https://github.com/MikalDev/greengrinds",
+        "properties": {},
+        "aceCategories": {
+          "achievement": "Achievement",
+          "steam": "Steam",
+          "cloud-file": "Cloud File",
+          "stat": "Stat",
+          "user-info": "User Info",
+          "dlc": "DLC",
+          "friends": "Friends"
+        },
+        "conditions": {
+          "on-achievement-activate-error": {
+            "list-name": "On activate achievement error",
+            "display-text": "On activate achievement error",
+            "description": "On activate achievement error. Returns error in expression ActivateAchievementLastErr."
+          },
+          "on-achievement-activate-success": {
+            "list-name": "On activate achievement success",
+            "display-text": "On activate achievement success",
+            "description": "On activate achievement success."
+          },
+          "on-get-achievement-error": {
+            "list-name": "On get achievement error",
+            "display-text": "On get achievement error",
+            "description": "On get achievement error."
+          },
+          "on-get-achievement-success": {
+            "list-name": "On get achievement success",
+            "display-text": "On get achievement success",
+            "description": "On get achievement success."
+          },
+          "on-clear-achievement-error": {
+            "list-name": "On clear achievement error",
+            "display-text": "On clear achievement error",
+            "description": "On clear achievement error."
+          },
+          "on-clear-achievement-success": {
+            "list-name": "On clear achievement success",
+            "display-text": "On clear achievement success",
+            "description": "On clear achievement success."
+          },
+          "on-get-achievement-names-success": {
+            "list-name": "On get achievement names success",
+            "display-text": "On get achievement names success",
+            "description": "On get achievement names success."
+          },
+          "on-get-achievement-names-error": {
+            "list-name": "On get achievement names error",
+            "display-text": "On get achievement names error",
+            "description": "On get achievement names error."
+          },
+          "on-get-number-of-achievements-error": {
+            "list-name": "On get number of achievements error",
+            "display-text": "On get number of achievements error",
+            "description": "On get number of achievements error."
+          },
+          "on-get-number-of-achievements-success": {
+            "list-name": "On get number of achievements success",
+            "display-text": "On get number of achievements success",
+            "description": "On get number of achievements success."
+          },
+          "on-overlay-activated": {
+            "list-name": "On overlay activated",
+            "display-text": "On overlay activated",
+            "description": "Triggered when the game overlay is shown."
+          },
+          "on-overlay-deactivated": {
+            "list-name": "On overlay deactivated",
+            "display-text": "On overlay deactivated",
+            "description": "Triggered when the game overlay is hidden."
+          },
+          "is-available": {
+            "list-name": "Is available",
+            "display-text": "Is available",
+            "description": "Is available"
+          },
+          "is-overlay-enabled": {
+            "list-name": "Is overlay enabled",
+            "display-text": "Is overlay enabled",
+            "description": "True if the Steam game overlay is currently enabled."
+          },
+          "on-save-text-to-file-success": {
+            "list-name": "On save text to file success",
+            "display-text": "On save text to file success",
+            "description": "On save text to file success."
+          },
+          "on-save-text-to-file-error": {
+            "list-name": "On save text to file error",
+            "display-text": "On save text to file error",
+            "description": "On save text to file error."
+          },
+          "on-read-text-from-file-success": {
+            "list-name": "On read text from file success",
+            "display-text": "On read text from file success",
+            "description": "On read text from file success."
+          },
+          "on-read-text-from-file-error": {
+            "list-name": "On read text from file error",
+            "display-text": "On read text from file error",
+            "description": "On read text from file error."
+          },
+          "on-get-cloud-status-success": {
+            "list-name": "On get cloud status success",
+            "display-text": "On get cloud status success",
+            "description": "On get cloud status success."
+          },
+          "on-get-cloud-status-error": {
+            "list-name": "On get cloud status error",
+            "display-text": "On get cloud status error",
+            "description": "On get cloud status error."
+          },
+          "is-cloud-enabled": {
+            "list-name": "Is cloud enabled",
+            "display-text": "Is cloud enabled",
+            "description": "Is clould enabled."
+          },
+          "is-cloud-enabled-for-user": {
+            "list-name": "Is cloud enabled for user",
+            "display-text": "Is cloud enabled for user",
+            "description": "Is cloud enabled for user."
+          },
+          "on-delete-file-success": {
+            "list-name": "On delete file success",
+            "display-text": "On delete file success",
+            "description": "On delete file success."
+          },
+          "on-delete-file-error": {
+            "list-name": "On delete file error",
+            "display-text": "On delete file error",
+            "description": "On delete file error."
+          },
+          "on-get-cloud-quota-success": {
+            "list-name": "On get cloud quota success",
+            "display-text": "On get cloud quota success",
+            "description": "On get cloud  quota success."
+          },
+          "on-get-cloud-quota-error": {
+            "list-name": "On get cloud quota error",
+            "display-text": "On get cloud quota error",
+            "description": "On get cloud  quota error."
+          },
+          "on-get-file-name-and-size-success": {
+            "list-name": "On get file name and size success",
+            "display-text": "On get file name and size success",
+            "description": "On get file name and size success."
+          },
+          "on-get-file-name-and-size-error": {
+            "list-name": "On get file name and size error",
+            "display-text": "On get file name and size error",
+            "description": "On get file name and size error"
+          },
+          "on-save-file-to-cloud-error": {
+            "list-name": "On save file to cloud error",
+            "display-text": "On save file to cloud error",
+            "description": "On save file to cloud error."
+          },
+          "on-save-file-to-cloud-success": {
+            "list-name": "On save file to cloud success",
+            "display-text": "On save file to cloud success",
+            "description": "On save file to cloud success."
+          },
+          "on-get-stat-int-success": {
+            "list-name": "On get stat int success",
+            "display-text": "On get stat int success",
+            "description": "On get stat int success."
+          },
+          "on-get-stat-int-error": {
+            "list-name": "On get stat int error",
+            "display-text": "On get stat int error",
+            "description": "On get stat int error."
+          },
+          "on-get-stat-float-success": {
+            "list-name": "On get stat float success",
+            "display-text": "On get stat float success",
+            "description": "On get stat float success."
+          },
+          "on-get-stat-float-error": {
+            "list-name": "On get stat float error",
+            "display-text": "On get stat float error",
+            "description": "On get stat float error."
+          },
+          "on-set-stat-success": {
+            "list-name": "On set stat success",
+            "display-text": "On set stat success",
+            "description": "On set stat success."
+          },
+          "on-set-stat-error": {
+            "list-name": "On set stat error",
+            "display-text": "On set stat error",
+            "description": "On set stat error."
+          },
+          "on-store-stats-success": {
+            "list-name": "On store stats success",
+            "display-text": "On store stats success",
+            "description": "On store stats success."
+          },
+          "on-store-stats-error": {
+            "list-name": "On store stats error",
+            "display-text": "On store stats error",
+            "description": "On store stats error."
+          },
+          "on-reset-all-stats-error": {
+            "list-name": "On reset all stats error",
+            "display-text": "On reset all stats error",
+            "description": "On reset all stats error."
+          },
+          "on-reset-all-stats-success": {
+            "list-name": "On reset all stats success",
+            "display-text": "On reset all stats success",
+            "description": "On reset all stats success."
+          },
+          "on-get-is-dlc-installed-success": {
+            "list-name": "On get is dlc installed success",
+            "display-text": "On get is dlc installed success",
+            "description": "On get is dlc installed success."
+          },
+          "on-get-is-dlc-installed-error": {
+            "list-name": "On get is dlc installed error",
+            "display-text": "On get is dlc installed error",
+            "description": "On get is dlc installed error."
+          },
+          "on-get-dlc-data-by-index-success": {
+            "list-name": "On get dlc data by index success",
+            "display-text": "On get dlc data by index success",
+            "description": "On get dlc data by index success"
+          },
+          "on-get-dlc-data-by-index-error": {
+            "list-name": "On get dlc data by index error",
+            "display-text": "On get dlc data by index error",
+            "description": "On get dlc data by index error"
+          },
+          "on-get-dlc-count-success": {
+            "list-name": "On get dlc count success",
+            "display-text": "On get dlc count success",
+            "description": "On get dlc count success"
+          },
+          "on-get-dlc-count-error": {
+            "list-name": "On get dlc count error",
+            "display-text": "On get dlc count error",
+            "description": "On get dlc count error"
+          },
+					"is-running-on-steam-deck": {
+						"list-name": "Is running on Steam Deck",
+						"display-text": "Is running on Steam Deck",
+						"description": "True if currently running on a Steam Deck device."
+					},
+          "on-get-friend-avatar-success": {
+            "list-name": "On get friend avatar success",
+            "display-text": "On get friend avatar success",
+            "description": "On get friend avatar success"
+          }
+        },
+        "actions": {
+          "activate-achievement": {
+            "list-name": "Activate achievement",
+            "display-text": "Activate achievement {0}",
+            "description": "Activate a Steam achievement.",
+            "params": {
+              "achievement": {
+                "name": "Achievement",
+                "desc": "API name of the achievement."
+              }
+            }
+          },
+          "get-achievement": {
+            "list-name": "Get achievement",
+            "display-text": "Get achievement {0}",
+            "description": "Gets whether the achievement is achieved in getAchievementLastData.",
+            "params": {
+              "achievement": {
+                "name": "Achievement",
+                "desc": "Achievement to get."
+              }
+            }
+          },
+          "clear-achievement": {
+            "list-name": "Clear achievement",
+            "display-text": "Clear achievement {0}",
+            "description": "Clear the achievement.",
+            "params": {
+              "achievement": {
+                "name": "Achievement",
+                "desc": "Achievement to clear."
+              }
+            }
+          },
+          "get-achievement-names": {
+            "list-name": "Get achievement names",
+            "display-text": "Get achievement names.",
+            "description": "Get achievement names. Names returned as a CSV string in expression GetAchievementNamesLastData."
+          },
+          "get-number-of-achievements": {
+            "list-name": "Get number of achievements",
+            "display-text": "Get number of achievements",
+            "description": "Get number of achievements"
+          },
+          "activate-overlay": {
+            "list-name": "Activate overlay",
+            "display-text": "Activate overlay for [b]{0}[/b]",
+            "description": "Activate the Steam game overlay.",
+            "params": {
+              "param-id": {
+                "name": "Option",
+                "desc": "The overlay section to display.",
+                "items": {
+                  "friends": "Friends",
+                  "community": "Community",
+                  "players": "Players",
+                  "settings": "Settings",
+                  "official-game-group": "Official Game Group",
+                  "stats": "Stats",
+                  "achievements": "Achievements"
+                }
+              }
+            }
+          },
+          "save-text-to-file": {
+            "list-name": "Save text to file",
+            "display-text": "Save text to file {0} {1}",
+            "description": "Save text to file.",
+            "params": {
+              "file_name": {
+                "name": "File Name",
+                "desc": "File Name"
+              },
+              "file_content": {
+                "name": "File Content",
+                "desc": "File Content"
+              }
+            }
+          },
+          "read-text-from-file": {
+            "list-name": "Read text from file",
+            "display-text": "Read text from file {0}",
+            "description": "Read text from file.",
+            "params": {
+              "file_name": {
+                "name": "File Name",
+                "desc": "File Name"
+              }
+            }
+          },
+          "get-cloud-status": {
+            "list-name": "Get cloud status",
+            "display-text": "Get cloud status",
+            "description": "Get cloud status. Update status of cloud enable, clould enable user and cloud file count."
+          },
+          "delete-file": {
+            "list-name": "Delete file",
+            "display-text": "Delete file {0}",
+            "description": "Delete file.",
+            "params": {
+              "file_name": {
+                "name": "File Name",
+                "desc": "File Name"
+              }
+            }
+          },
+          "get-cloud-quota": {
+            "list-name": "Get cloud quota",
+            "display-text": "Get cloud quota",
+            "description": "Get cloud quota. Check GetCloudQuotaTotal and GetCloudQuotaAvailable for results."
+          },
+          "get-file-name-and-size": {
+            "list-name": "Get file name and size",
+            "display-text": "Get file name and size {0}",
+            "description": "Get file name and size of index.",
+            "params": {
+              "index": {
+                "name": "Index",
+                "desc": "Index"
+              }
+            }
+          },
+          "enable-cloud": {
+            "list-name": "Enable cloud",
+            "display-text": "Enable cloud {0}",
+            "description": "Enable cloud.",
+            "params": {
+              "flag": {
+                "name": "Flag",
+                "desc": "Flag, 1 = enabled, 0 = disabled"
+              }
+            }
+          },
+          "save-file-to-cloud": {
+            "list-name": "Save file to cloud",
+            "display-text": "Save file to cloud {0}",
+            "description": "Save file to cloud.",
+            "params": {
+              "file-path": {
+                "name": "File path",
+                "desc": "File path."
+              }
+            }
+          },
+          "get-stat-int": {
+            "list-name": "Get stat int",
+            "display-text": "Get stat int {0}",
+            "description": "Get stat int. Returns a number representing the value of the user stat in expression GetStatIntLastData.",
+            "params": {
+              "name": {
+                "name": "Name",
+                "desc": "Name of the user stat."
+              }
+            }
+          },
+          "get-stat-float": {
+            "list-name": "Get stat float",
+            "display-text": "Get stat float {0}",
+            "description": "Get stat float. Returns a number representing the value of the user stat in expression GetStatFloatLastData.",
+            "params": {
+              "name": {
+                "name": "Name",
+                "desc": "Name of the user stat."
+              }
+            }
+          },
+          "set-stat": {
+            "list-name": "Set stat",
+            "display-text": "Set stat value {1} with {0}",
+            "description": "Set stat value.",
+            "params": {
+              "value": {
+                "name": "Value",
+                "desc": "Value to set."
+              },
+              "name": {
+                "name": "Name",
+                "desc": "Name of the user stat."
+              }
+            }
+          },
+          "store-stats": {
+            "list-name": "Store stats",
+            "display-text": "Store stats",
+            "description": "Stores the current user stats data on the server. Returns game_id in expression StoreStatsLastData."
+          },
+          "reset-all-stats": {
+            "list-name": "Reset all stats",
+            "display-text": "Reset all stats {0}",
+            "description": "Reset all stats. Typically used only for development. Set parameter Reset Achievement to '1' to also reset all achievements.",
+            "params": {
+              "reset-achievement": {
+                "name": "Reset achievements",
+                "desc": "Reset achievements. If set to '1' also resets achievements."
+              }
+            }
+          },
+          "get-is-dlc-installed": {
+            "list-name": "Get is dlc installed",
+            "display-text": "Get is dlc installed {0}",
+            "description": "Get is dlc installed. Returns whether the dlc is installed in expression GetIsDLCInstalledLastData.",
+            "params": {
+              "dlcAppId": {
+                "name": "DLC App Id",
+                "desc": "The AppId of a DLC (integer)."
+              }
+            }
+          },
+          "install-dlc": {
+            "list-name": "Install DLC",
+            "display-text": "Install DLC {0}",
+            "description": "Install DLC with DLC App ID (integer.)",
+            "params": {
+              "dlc-app-id": {
+                "name": "DLC App Id",
+                "desc": "The AppId of a DLC (integer)."
+              }
+            }
+          },
+          "uninstall-dlc": {
+            "list-name": "Uninstall DLC",
+            "display-text": "Uninstall DLC {0}",
+            "description": "Uninstall DLC with DLC App ID (integer.)",
+            "params": {
+              "dlc-app-id": {
+                "name": "DLC App Id",
+                "desc": "The AppId of a DLC (integer)."
+              }
+            }
+          },
+          "get-dlc-data-by-index": {
+            "list-name": "Get DLC Data By Index",
+            "display-text": "Get DLC Data By Index {0}",
+            "description": "*WARNING* *Requires updated Greenworks binaries* Get DLC Data By Index. Returns JSON string with data in GetDLCDataByIndexLastData.",
+            "params": {
+              "index": {
+                "name": "Index",
+                "desc": "Index"
+              }
+            }
+          },
+          "get-dlc-count": {
+            "list-name": "Get DLC Count",
+            "display-text": "Get DLC Count",
+            "description": "Get DLC Count. Return value in GetDLCountLastData."
+          },
+          "get-friend-avatar": {
+            "list-name": "Get Friend Avatar",
+            "display-text": "Get Friend {0} Avatar",
+            "description": "Get Friend Avatar. Returns JSON string with, width, height, iamge array in GetFriendAvatarLastData.",
+            "params": {
+              "steam-id": {
+                "name": "Steam ID",
+                "desc": "Steam ID"
+              }
+            }
+          }
+        },
+        "expressions": {
+          "activate-achievement-last-err": {
+            "translated-name": "ActivateAchievementLastErr",
+            "description": "Activate achievement last error."
+          },
+          "get-achievement-last-data": {
+            "translated-name": "GetAchievementLastData",
+            "description": "Get achievement last data. 1=true, 0=false."
+          },
+          "get-achievement-last-err": {
+            "translated-name": "GetAchievementLastErr",
+            "description": "Get achievement last error."
+          },
+          "clear-achievement-last-err": {
+            "translated-name": "ClearAchievementLastErr",
+            "description": "Clear achievement last error."
+          },
+          "get-achievement-names-last-err": {
+            "translated-name": "GetAchievementNamesLastErr",
+            "description": "Get achievement names last error."
+          },
+          "get-achievement-names-last-data": {
+            "translated-name": "GetAchievementNamesLastData",
+            "description": "Get achievement names last data. A string of names of achievements."
+          },
+          "get-number-of-achievements-last-data": {
+            "translated-name": "GetNumberOfAchievementsLastData",
+            "description": "Get number of achievements last data. Returns a number representing the number of all achievements in the game."
+          },
+          "get-number-of-achievements-last-err": {
+            "translated-name": "GetNumberOfAchievementsLastErr",
+            "description": "Get number of achievements last error."
+          },
+          "game-language": {
+            "translated-name": "GameLanguage",
+            "description": "The language set specifically for the game."
+          },
+          "ui-language": {
+            "translated-name": "UILanguage",
+            "description": "The language set for the Steam UI."
+          },
+          "read-text-from-file-last-data": {
+            "translated-name": "ReadTextFromFileLastData",
+            "description": "Read text from file last data."
+          },
+          "read-text-from-file-last-err": {
+            "translated-name": "ReadTextFromFileLastErr",
+            "description": "Read text from file last error."
+          },
+          "save-text-to-file-last-err": {
+            "translated-name": "SaveTextToFileLastErr",
+            "description": "Save text to file last error."
+          },
+          "get-file-count": {
+            "translated-name": "GetFileCount",
+            "description": "Get file count."
+          },
+          "delete-file-last-err": {
+            "translated-name": "DeleteFileLastErr",
+            "description": "Delete file last error."
+          },
+          "get-cloud-quota-total": {
+            "translated-name": "GetCloudQuotaTotal",
+            "description": "Get cloud quota total bytes (uint 64 string.)"
+          },
+          "get-cloud-quota-available": {
+            "translated-name": "GetCloudQuotaAvailable",
+            "description": "Get cloud quota available bytes (uint 64 string.)"
+          },
+          "get-file-name-and-size-last-err": {
+            "translated-name": "GetFileNameAndSizeLastErr",
+            "description": "Get file name and size last error."
+          },
+          "get-file-name-and-size-name": {
+            "translated-name": "GetFileNameAndSizeName",
+            "description": "Get file name and size name."
+          },
+          "get-file-name-and-size-size": {
+            "translated-name": "GetFileNameAndSizeSize",
+            "description": "Get file name and size size."
+          },
+          "save-file-to-cloud-last-err": {
+            "translated-name": "SaveFileToCloudLastErr",
+            "description": "Save file to cloud last error."
+          },
+          "get-stat-int-last-data": {
+            "translated-name": "GetStatIntLastData",
+            "description": "Get stat int last data."
+          },
+          "get-stat-int-last-err": {
+            "translated-name": "GetStatIntLastErr",
+            "description": "Get stat int last error."
+          },
+          "get-stat-float-last-data": {
+            "translated-name": "GetStatFloatLastData",
+            "description": "Get stat float last data."
+          },
+          "get-stat-float-last-err": {
+            "translated-name": "GetStatFloatLastErr",
+            "description": "Get stat float last error."
+          },
+          "store-stats-last-data": {
+            "translated-name": "StoreStatsLastData",
+            "description": "Store stats last data. Returns game_id."
+          },
+          "store-stats-last-err": {
+            "translated-name": "StoreStatsLastErr",
+            "description": "Store stats last error."
+          },
+          "get-is-dlc-installed-last-data": {
+            "translated-name": "GetIsDLCInstalledLastData",
+            "description": "Get is dlc installed last data. 1=true, 0=false."
+          },
+          "get-is-dlc-installed-last-err": {
+            "translated-name": "GetIsDLCInstalledLastErr",
+            "description": "Get is dlc installed last error."
+          },
+          "get-dlc-data-by-index-last-data": {
+            "translated-name": "GetDlcDataByIndexLastData",
+            "description": "GetDlcDataByIndexLastData JSON string with the following data appId: Integer: The APPID of the DLC, available: Boolean: Flag whether the DLC is currently available, name: String: The name of the DLC."
+          },
+          "get-dlc-data-by-index-last-err": {
+            "translated-name": "GetDlcDataByIndexLastErr",
+            "description": "GetDlcDataByIndexLastError data."
+          },
+          "get-dlc-count-last-data": {
+            "translated-name": "GetDLCCountLastData",
+            "description": "GetDLCCountLastData, DLC Count."
+          },
+          "get-dlc-count-last-err": {
+            "translated-name": "GetDLCCountLastErr",
+            "description": "GetDLCCountLastErr data."
+          },
+          "screen-name": {
+            "translated-name": "ScreenName",
+            "description": "The current user's Steam screen name."
+          },
+          "account-id": {
+            "translated-name": "AccountID",
+            "description": "The current user's Steam account ID."
+          },
+          "static-account-id-str": {
+            "translated-name": "StaticAccountID",
+            "description": "The current user's Steam static account ID."
+          },
+          "user-level": {
+            "translated-name": "UserLevel",
+            "description": "The current user's Steam level."
+          },
+          "static-account-id": {
+            "translated-name": "StaticAccountID",
+            "description": "The current user's Steam static account ID."
+          },
+          "ip-country": {
+            "translated-name": "IPCountry",
+            "description": "Returns the 2 digit ISO 3166-1-alpha-2 format country code which client is running in, e.g \"US\" or \"UK\"."
+          },
+          "get-friend-avatar-last-data": {
+            "translated-name": "GetFriendAvatarLastData",
+            "description": "Get friend avatar last data. JSON string object of RGBA image, width, height, RGBA data array."
+          }
+        }
+      }
+    }
+  }
+}

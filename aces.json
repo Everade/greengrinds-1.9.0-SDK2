@@ -1,0 +1,797 @@
+{
+  "achievement": {
+    "conditions": [
+      {
+        "id": "on-achievement-activate-error",
+        "scriptName": "OnActivateAchievementError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-achievement-activate-success",
+        "scriptName": "OnActivateAchievementSuccess",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-achievement-error",
+        "scriptName": "OnGetAchievementError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-achievement-success",
+        "scriptName": "OnGetAchievementSuccess",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-clear-achievement-error",
+        "scriptName": "OnClearAchievementError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-clear-achievement-success",
+        "scriptName": "OnClearAchievementSuccess",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-achievement-names-success",
+        "scriptName": "OnGetAchievementNamesSuccess",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-achievement-names-error",
+        "scriptName": "OnGetAchievementNamesError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-number-of-achievements-error",
+        "scriptName": "OnGetNumberOfAchievementsError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-number-of-achievements-success",
+        "scriptName": "OnGetNumberOfAchievementsSuccess",
+        "highlight": false,
+        "isTrigger": true
+      }
+    ],
+    "actions": [
+      {
+        "id": "activate-achievement",
+        "scriptName": "ActivateAchievement",
+        "highlight": true,
+        "params": [
+          {
+            "id": "achievement",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "id": "get-achievement",
+        "scriptName": "GetAchievement",
+        "highlight": false,
+        "params": [
+          {
+            "id": "achievement",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "id": "clear-achievement",
+        "scriptName": "ClearAchievement",
+        "highlight": false,
+        "params": [
+          {
+            "id": "achievement",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "id": "get-achievement-names",
+        "scriptName": "GetAchievementNames",
+        "highlight": false
+      },
+      {
+        "id": "get-number-of-achievements",
+        "scriptName": "GetNumberOfAchievements",
+        "highlight": false
+      }
+    ],
+    "expressions": [
+      {
+        "id": "activate-achievement-last-err",
+        "expressionName": "ActivateAchievementLastErr",
+        "returnType": "string"
+      },
+      {
+        "id": "get-achievement-last-data",
+        "expressionName": "GetAchievementLastData",
+        "returnType": "number"
+      },
+      {
+        "id": "get-achievement-last-err",
+        "expressionName": "GetAchievementLastErr",
+        "returnType": "string"
+      },
+      {
+        "id": "clear-achievement-last-err",
+        "expressionName": "ClearAchievementLastErr",
+        "returnType": "string"
+      },
+      {
+        "id": "get-achievement-names-last-err",
+        "expressionName": "GetAchievementNamesLastErr",
+        "returnType": "string"
+      },
+      {
+        "id": "get-achievement-names-last-data",
+        "expressionName": "GetAchievementNamesLastData",
+        "returnType": "string"
+      },
+      {
+        "id": "get-number-of-achievements-last-data",
+        "expressionName": "GetNumberOfAchievementsLastData",
+        "returnType": "number"
+      },
+      {
+        "id": "get-number-of-achievements-last-err",
+        "expressionName": "GetNumberOfAchievementsLastErr",
+        "returnType": "string"
+      }
+    ]
+  },
+  "steam": {
+    "conditions": [
+      {
+        "id": "on-overlay-activated",
+        "scriptName": "OnOverlayActivated",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-overlay-deactivated",
+        "scriptName": "OnOverlayDeactivated",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "is-available",
+        "scriptName": "IsAvailable",
+        "highlight": false
+      },
+      {
+        "id": "is-overlay-enabled",
+        "scriptName": "IsOverlayEnabled",
+        "highlight": false
+      },
+			{
+				"id": "is-running-on-steam-deck",
+				"scriptName": "IsRunningOnSteamDeck"
+			}
+    ],
+    "actions": [
+      {
+        "id": "activate-overlay",
+        "scriptName": "ActivateOverlay",
+        "highlight": false,
+        "params": [
+          {
+            "id": "param-id",
+            "type": "combo",
+            "items": [
+              "friends",
+              "community",
+              "players",
+              "settings",
+              "official-game-group",
+              "stats",
+              "achievements"
+            ]
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "id": "game-language",
+        "expressionName": "GameLanguage",
+        "returnType": "string"
+      },
+      {
+        "id": "ui-language",
+        "expressionName": "UILanguage",
+        "returnType": "string"
+      }
+    ]
+  },
+  "cloud-file": {
+    "conditions": [
+      {
+        "id": "on-save-text-to-file-success",
+        "scriptName": "OnSaveTextToFileSuccess",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-save-text-to-file-error",
+        "scriptName": "OnSaveTextToFileError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-read-text-from-file-success",
+        "scriptName": "OnReadTextFromFileSuccess",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-read-text-from-file-error",
+        "scriptName": "OnReadTextFromFileError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-cloud-status-success",
+        "scriptName": "OnGetCloudStatusSuccess",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-cloud-status-error",
+        "scriptName": "OnGetCloudStatusError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "is-cloud-enabled",
+        "scriptName": "IsCloudEnabled",
+        "highlight": false
+      },
+      {
+        "id": "is-cloud-enabled-for-user",
+        "scriptName": "IsCloudEnabledForUser",
+        "highlight": false
+      },
+      {
+        "id": "on-delete-file-success",
+        "scriptName": "OnDeleteFileSuccess",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-delete-file-error",
+        "scriptName": "OnDeleteFileError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-cloud-quota-success",
+        "scriptName": "OnGetCloudQuotaSuccess",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-cloud-quota-error",
+        "scriptName": "OnGetCloudQuotaError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-file-name-and-size-success",
+        "scriptName": "OnGetFileNameAndSizeSuccess",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-file-name-and-size-error",
+        "scriptName": "OnGetFileNameAndSizeError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-save-file-to-cloud-error",
+        "scriptName": "OnSaveFileToCloudError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-save-file-to-cloud-success",
+        "scriptName": "OnSaveFileToCloudSuccess",
+        "highlight": false,
+        "isTrigger": true
+      }
+    ],
+    "actions": [
+      {
+        "id": "save-text-to-file",
+        "scriptName": "SaveTextToFile",
+        "highlight": false,
+        "params": [
+          {
+            "id": "file_name",
+            "type": "string"
+          },
+          {
+            "id": "file_content",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "id": "read-text-from-file",
+        "scriptName": "ReadTextFromFile",
+        "highlight": false,
+        "params": [
+          {
+            "id": "file_name",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "id": "get-cloud-status",
+        "scriptName": "GetCloudStatus",
+        "highlight": false
+      },
+      {
+        "id": "delete-file",
+        "scriptName": "DeleteFile",
+        "highlight": false,
+        "params": [
+          {
+            "id": "file_name",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "id": "get-cloud-quota",
+        "scriptName": "GetCloudQuota",
+        "highlight": false
+      },
+      {
+        "id": "get-file-name-and-size",
+        "scriptName": "GetFileNameAndSize",
+        "highlight": false,
+        "params": [
+          {
+            "id": "index",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "id": "enable-cloud",
+        "scriptName": "EnableCloud",
+        "highlight": false,
+        "params": [
+          {
+            "id": "flag",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "id": "save-file-to-cloud",
+        "scriptName": "SaveFileToCloud",
+        "highlight": false,
+        "params": [
+          {
+            "id": "file-path",
+            "type": "string",
+            "initialValue": ""
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "id": "read-text-from-file-last-data",
+        "expressionName": "ReadTextFromFileLastData",
+        "returnType": "string"
+      },
+      {
+        "id": "read-text-from-file-last-err",
+        "expressionName": "ReadTextFromFileLastErr",
+        "returnType": "string"
+      },
+      {
+        "id": "save-text-to-file-last-err",
+        "expressionName": "SaveTextToFileLastErr",
+        "returnType": "string"
+      },
+      {
+        "id": "get-file-count",
+        "expressionName": "GetFileCount",
+        "returnType": "number"
+      },
+      {
+        "id": "delete-file-last-err",
+        "expressionName": "DeleteFileLastErr",
+        "returnType": "string"
+      },
+      {
+        "id": "get-cloud-quota-total",
+        "expressionName": "GetCloudQuotaTotal",
+        "returnType": "string"
+      },
+      {
+        "id": "get-cloud-quota-available",
+        "expressionName": "GetCloudQuotaAvailable",
+        "returnType": "string"
+      },
+      {
+        "id": "get-file-name-and-size-last-err",
+        "expressionName": "GetFileNameAndSizeLastErr",
+        "returnType": "string"
+      },
+      {
+        "id": "get-file-name-and-size-name",
+        "expressionName": "GetFileNameAndSizeName",
+        "returnType": "string"
+      },
+      {
+        "id": "get-file-name-and-size-size",
+        "expressionName": "GetFileNameAndSizeSize",
+        "returnType": "number"
+      },
+      {
+        "id": "save-file-to-cloud-last-err",
+        "expressionName": "SaveFileToCloudLastErr",
+        "returnType": "string"
+      }
+    ]
+  },
+  "stat": {
+    "conditions": [
+      {
+        "id": "on-get-stat-int-success",
+        "scriptName": "OnGetStatIntSuccess",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-stat-int-error",
+        "scriptName": "OnGetStatIntError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-stat-float-success",
+        "scriptName": "OnGetStatFloatSuccess",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-stat-float-error",
+        "scriptName": "OnGetStatFloatError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-set-stat-success",
+        "scriptName": "OnSetStatSuccess",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-set-stat-error",
+        "scriptName": "OnSetStatError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-store-stats-success",
+        "scriptName": "OnStoreStatsSuccess",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-store-stats-error",
+        "scriptName": "OnStoreStatsError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-reset-all-stats-error",
+        "scriptName": "OnResetAllStatsError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-reset-all-stats-success",
+        "scriptName": "OnResetAllStatsSuccess",
+        "highlight": false,
+        "isTrigger": true
+      }
+    ],
+    "actions": [
+      {
+        "id": "get-stat-int",
+        "scriptName": "GetStatInt",
+        "highlight": true,
+        "params": [
+          {
+            "id": "name",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "id": "get-stat-float",
+        "scriptName": "GetStatFloat",
+        "params": [
+          {
+            "id": "name",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "id": "set-stat",
+        "scriptName": "SetStat",
+        "params": [
+          {
+            "id": "value",
+            "type": "number"
+          },
+          {
+            "id": "name",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "id": "store-stats",
+        "scriptName": "StoreStats",
+        "highlight": false
+      },
+      {
+        "id": "reset-all-stats",
+        "scriptName": "ResetAllStats",
+        "highlight": false,
+        "params": [
+          {
+            "id": "reset-achievement",
+            "type": "number",
+            "initialValue": "0"
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "id": "get-stat-int-last-data",
+        "expressionName": "GetStatIntLastData",
+        "returnType": "number"
+      },
+      {
+        "id": "get-stat-int-last-err",
+        "expressionName": "GetStatIntLastErr",
+        "returnType": "string"
+      },
+      {
+        "id": "get-stat-float-last-data",
+        "expressionName": "GetStatFloatLastData",
+        "returnType": "number"
+      },
+      {
+        "id": "get-stat-float-last-err",
+        "expressionName": "GetStatFloatLastErr",
+        "returnType": "string"
+      },
+      {
+        "id": "store-stats-last-data",
+        "expressionName": "StoreStatsLastData",
+        "returnType": "string"
+      },
+      {
+        "id": "store-stats-last-err",
+        "expressionName": "StoreStatsLastErr",
+        "returnType": "string"
+      }
+    ]
+  },
+  "dlc": {
+    "conditions": [
+      {
+        "id": "on-get-is-dlc-installed-success",
+        "scriptName": "OnGetIsDLCInstalledSuccess",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-is-dlc-installed-error",
+        "scriptName": "OnGetIsDLCInstalledError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-dlc-data-by-index-success",
+        "scriptName": "OnGetDLCDataByIndexSuccess",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-dlc-data-by-index-error",
+        "scriptName": "OnGetDLCDataByIndexError",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-dlc-count-success",
+        "scriptName": "OnGetDLCCountSuccess",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-dlc-count-error",
+        "scriptName": "OnGetDLCCountError",
+        "highlight": false,
+        "isTrigger": true
+      }
+    ],
+    "actions": [
+      {
+        "id": "get-is-dlc-installed",
+        "scriptName": "GetIsDLCInstalled",
+        "highlight": true,
+        "params": [
+          {
+            "id": "dlcAppId",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "id": "install-dlc",
+        "scriptName": "InstallDlc",
+        "highlight": false,
+        "params": [
+          {
+            "id": "dlc-app-id",
+            "type": "number",
+            "initialValue": "0"
+          }
+        ]
+      },
+      {
+        "id": "uninstall-dlc",
+        "scriptName": "UninstallDlc",
+        "highlight": false,
+        "params": [
+          {
+            "id": "dlc-app-id",
+            "type": "number",
+            "initialValue": "0"
+          }
+        ]
+      },
+      {
+        "id": "get-dlc-data-by-index",
+        "scriptName": "GetDlcDataByIndex",
+        "highlight": false,
+        "params": [
+          {
+            "id": "index",
+            "type": "number",
+            "initialValue": "0"
+          }
+        ]
+      },
+      {
+        "id": "get-dlc-count",
+        "scriptName": "GetDlcCount",
+        "highlight": false
+      }
+    ],
+    "expressions": [
+      {
+        "id": "get-is-dlc-installed-last-data",
+        "expressionName": "GetIsDLCInstalledLastData",
+        "returnType": "number"
+      },
+      {
+        "id": "get-is-dlc-installed-last-err",
+        "expressionName": "GetIsDLCInstalledLastErr",
+        "returnType": "string"
+      },
+      {
+        "id": "get-dlc-data-by-index-last-data",
+        "expressionName": "GetDlcDataByIndexLastData",
+        "returnType": "string"
+      },
+      {
+        "id": "get-dlc-data-by-index-last-err",
+        "expressionName": "GetDlcDataByIndexLastErr",
+        "returnType": "string"
+      },
+      {
+        "id": "get-dlc-count-last-data",
+        "expressionName": "GetDLCCountLastData",
+        "returnType": "number"
+      },
+      {
+        "id": "get-dlc-count-last-err",
+        "expressionName": "GetDlcCountLastErr",
+        "returnType": "string"
+      }
+    ]
+  },
+  "user-info": {
+    "conditions": [],
+    "actions": [],
+    "expressions": [
+      {
+        "id": "screen-name",
+        "expressionName": "ScreenName",
+        "returnType": "string"
+      },
+      {
+        "id": "account-id",
+        "expressionName": "AccountID",
+        "returnType": "number"
+      },
+      {
+        "id": "static-account-id-str",
+        "expressionName": "StaticAccountID",
+        "returnType": "string"
+      },
+      {
+        "id": "user-level",
+        "expressionName": "UserLevel",
+        "returnType": "number"
+      },
+      {
+        "id": "static-account-id",
+        "expressionName": "StaticAccountID",
+        "returnType": "any"
+      },
+      {
+        "id": "ip-country",
+        "expressionName": "IPCountry",
+        "returnType": "string"
+      }
+    ]
+  },
+  "friends": {
+    "conditions": [
+      {
+        "id": "on-get-friend-avatar-success",
+        "scriptName": "OnGetFriendAvatarSuccess",
+        "highlight": false,
+        "isTrigger": true
+      }
+    ],
+    "actions": [
+      {
+        "id": "get-friend-avatar",
+        "scriptName": "GetFriendAvatar",
+        "highlight": true,
+        "params": [
+          {
+            "id": "steam-id",
+            "type": "string"
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "id": "get-friend-avatar-last-data",
+        "expressionName": "GetFriendAvatarLastData",
+        "returnType": "string"
+      }
+   ]
+  }
+}

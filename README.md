@@ -23,8 +23,8 @@ Download the latest [release](https://github.com/Everade/greengrinds-1.9.0-SDK2/
 
 ## Attribution
 
-Greengrinds 1.9.0 by [Mikal](https://www.construct.net/en/make-games/addons/244/greengrinds).
-SDK2 port by [EMIINDO](https://github.com/EMIINDO/greengrinds-1.12.0-stable-c3addon).
+- Greengrinds 1.9.0 by [Mikal](https://www.construct.net/en/make-games/addons/244/greengrinds).
+- SDK2 port by [EMIINDO](https://github.com/EMIINDO/greengrinds-1.12.0-stable-c3addon).
 
 ## License
 

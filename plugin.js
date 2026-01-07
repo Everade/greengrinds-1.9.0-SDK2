@@ -1,7 +1,7 @@
 "use strict";
 (function () {
   const PLUGIN_ID = "open_Greengrinds";
-  const PLUGIN_VERSION = "1.9.0";
+  const PLUGIN_VERSION = "1.9.1";
   const PLUGIN_CATEGORY = "general";
 
   let app = null;
@@ -18,14 +18,12 @@
 
         this._info.SetName(globalThis.lang(".name"));
         this._info.SetDescription(globalThis.lang(".description"));
-        this._info.SetVersion(PLUGIN_VERSION);
         this._info.SetCategory(PLUGIN_CATEGORY);
         this._info.SetAuthor("open");
         this._info.SetHelpUrl(globalThis.lang(".help-url"));
         this._info.SetRuntimeModuleMainScript("c3runtime/main.js");
         this._info.SetIsSingleGlobal(true);
 
-        this._info.SetSupportedRuntimes(["c3"]);
         this._info.SetDOMSideScripts(["c3runtime/domSide.js"]);
 
         this._info.AddFileDependency({
